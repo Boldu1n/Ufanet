@@ -5,7 +5,9 @@ import re
 import datetime
 import time
 import connector
-token='5344038250:AAGWruxJDA9craFmiDqPynedlcQ-6E8Qagc'
+from secrets import Secrets
+token = Secrets()
+token = token.get_token()
 bot = telebot.TeleBot(token)
 num=0
 a={'starttime':'',
